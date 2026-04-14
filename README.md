@@ -54,7 +54,7 @@ chmod +x mahabub
 sudo cp mahabub /usr/local/bin/
 ```
 
-### **nstall Dependencies**
+### **Install Dependencies**
 
 ```bash
 # Go tools
@@ -70,3 +70,117 @@ pip install sublist3r knockpy
 # Update nuclei templates
 nuclei -update-templates
 ```
+## 🎮 Usage
+
+### Basic Commands
+
+```bash
+# Run recon on a domain
+mahabub example.com
+
+# Global usage (if installed)
+mahabub google.com
+
+# Show help
+mahabub -h
+Examples
+bash
+# Single domain
+mahabub tesla.com
+
+# Multiple domains (create a script)
+for domain in $(cat domains.txt); do
+    mahabub $domain
+done
+📂 Output Structure
+text
+recon_20240101_120000/
+├── 📁 subdomains/
+│   ├── all_subdomains.txt      # All discovered subdomains
+│   ├── subfinder.txt            # Subfinder results
+│   ├── assetfinder.txt          # Assetfinder results
+│   └── amass.txt                # Amass results
+│
+├── 📁 alive/
+│   ├── alive_domains.txt        # Live hosts with status codes
+│   ├── httpx_all.txt            # HTTPx detailed output
+│   ├── cdn_detected.txt         # CDN detection
+│   └── waf_detected.txt         # WAF detection
+│
+├── 📁 urls/
+│   ├── all_urls.txt             # All extracted URLs
+│   ├── param_urls.txt           # URLs with parameters
+│   └── parameters.txt           # Unique parameters
+│
+├── 📁 vulnerabilities/
+│   ├── dalfox_xss.txt           # XSS findings
+│   ├── nuclei_all.txt           # Nuclei scan results
+│   ├── critical_findings.txt    # Critical vulnerabilities
+│   ├── sqli_params.txt          # SQLi potential params
+│   ├── lfi_params.txt           # LFI potential params
+│   └── sensitive_endpoints.txt  # Admin/login pages
+│
+├── 📁 screenshots/              # Website screenshots
+├── 📁 ports/                    # Port scan results
+│
+├── 📄 FINAL_REPORT.txt          # Comprehensive text report
+└── 🌐 report.html               # Interactive HTML report
+📊 Sample Output
+text
+┌─────────────────────────────────────────────────────────────┐
+│                      MAHABUB RECON TOOL                     │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  Usage: ./mahabub.sh <domain>                               │
+│  Usage:  mahabub <domain>                                   │
+│                                                             │
+│  Examples:                                                  │
+│   ./mahabub.sh example.com                                  │
+│     mahabub google.com                                      │
+│     mahabub github.com                                      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+
+[✓] Subdomains Found:    1,247
+[✓] Alive Hosts:         342
+[✓] Total URLs:          45,891
+[✓] Parameter URLs:      12,456
+[✓] Critical Issues:     3
+[✓] High Issues:         12
+🔥 Advanced Features
+Performance Optimizations
+Multi-threading: 200+ concurrent threads
+
+Smart Rate Limiting: Avoids IP bans
+
+Resume Capability: Can resume interrupted scans
+
+Memory Efficient: Streams large files
+
+Smart Filtering
+Automatically removes duplicate URLs
+
+Filters static files (css, js, images)
+
+Validates domain scope
+
+Removes false positives
+
+🎯 Use Cases
+Use Case	Description
+Bug Bounty	Find subdomains, endpoints, and vulnerabilities
+Pentesting	Comprehensive reconnaissance for authorized tests
+CTF	Fast enumeration for capture the flag competitions
+Security Research	Discover attack surface of organizations
+⚙️ Configuration
+Custom Threads
+bash
+# Edit the script to change threads
+THREADS=500  # Increase for faster scans
+TIMEOUT=3    # Decrease for faster timeouts
+API Keys (Optional)
+bash
+# Add for better results
+export KNOXSS_API_KEY="your_key"
+export SECURITYTRAILS_API_KEY="your_key"
+export URLSCAN_API_KEY="your_key"
