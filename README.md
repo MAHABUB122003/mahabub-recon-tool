@@ -52,3 +52,21 @@ git clone https://github.com/MAHABUB122003/mahabub-recon-tool.git
 cd mahabub-recon-tool
 chmod +x mahabub
 sudo cp mahabub /usr/local/bin/
+```
+
+###Install Dependencies
+
+```bash
+# Go tools
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install -v github.com/tomnomnom/assetfinder@latest
+go install -v github.com/lc/gau/v2/cmd/gau@latest
+
+# Python tools
+pip install sublist3r knockpy
+
+# Update nuclei templates
+nuclei -update-templates
+```
