@@ -54,7 +54,7 @@ chmod +x mahabub
 sudo cp mahabub /usr/local/bin/
 ```
 
-## **nstall Dependencies**
+### **nstall Dependencies**
 
 ```bash
 # Go tools
