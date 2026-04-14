@@ -93,8 +93,9 @@ mahabub tesla.com
 for domain in $(cat domains.txt); do
     mahabub $domain
 done
-📂 Output Structure
-text
+```
+### 📂 **Output Structure**
+```text
 recon_20240101_120000/
 ├── 📁 subdomains/
 │   ├── all_subdomains.txt      # All discovered subdomains
@@ -126,8 +127,9 @@ recon_20240101_120000/
 │
 ├── 📄 FINAL_REPORT.txt          # Comprehensive text report
 └── 🌐 report.html               # Interactive HTML report
-📊 Sample Output
-text
+```
+### 📊 **Sample Output**
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                      MAHABUB RECON TOOL                     │
 ├─────────────────────────────────────────────────────────────┤
