@@ -1,0 +1,4 @@
+sudo mv mahabub.sh /usr/local/bin/mahabub
+
+mahabub --help
+
