@@ -87,8 +87,9 @@ Examples
 bash
 # Single domain
 mahabub tesla.com
-
-# Multiple domains (create a script)
+```
+### **Multiple domains (create a script)**
+```
 for domain in $(cat domains.txt); do
     mahabub $domain
 done
@@ -165,7 +166,7 @@ Filters static files (css, js, images)
 Validates domain scope
 
 Removes false positives
-
+```
 🎯 Use Cases
 Use Case	Description
 Bug Bounty	Find subdomains, endpoints, and vulnerabilities
@@ -180,7 +181,9 @@ THREADS=500  # Increase for faster scans
 TIMEOUT=3    # Decrease for faster timeouts
 API Keys (Optional)
 bash
-# Add for better results
+### **Add for better results**
+```
 export KNOXSS_API_KEY="your_key"
 export SECURITYTRAILS_API_KEY="your_key"
 export URLSCAN_API_KEY="your_key"
+```
