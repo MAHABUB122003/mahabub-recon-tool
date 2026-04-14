@@ -7,7 +7,7 @@
 [![Tools](https://img.shields.io/badge/tools-25+-orange.svg)]()
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MAHABUB122003/mahabub-recon-tool/main/banner.png" alt="MAHABUB Recon Tool Banner" width="800">
+  <img src="images/Banner.png" alt="MAHABUB Recon Tool Banner" width="800">
 </p>
 
 ## 🎯 **Overview**
