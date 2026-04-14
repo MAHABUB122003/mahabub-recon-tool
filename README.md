@@ -96,37 +96,33 @@ done
 ```
 ### 📂 **Output Structure**
 ```text
-recon_20240101_120000/
-├── 📁 subdomains/
-│   ├── all_subdomains.txt      # All discovered subdomains
-│   ├── subfinder.txt            # Subfinder results
-│   ├── assetfinder.txt          # Assetfinder results
-│   └── amass.txt                # Amass results
-│
-├── 📁 alive/
-│   ├── alive_domains.txt        # Live hosts with status codes
-│   ├── httpx_all.txt            # HTTPx detailed output
-│   ├── cdn_detected.txt         # CDN detection
-│   └── waf_detected.txt         # WAF detection
-│
-├── 📁 urls/
-│   ├── all_urls.txt             # All extracted URLs
-│   ├── param_urls.txt           # URLs with parameters
-│   └── parameters.txt           # Unique parameters
-│
-├── 📁 vulnerabilities/
-│   ├── dalfox_xss.txt           # XSS findings
-│   ├── nuclei_all.txt           # Nuclei scan results
-│   ├── critical_findings.txt    # Critical vulnerabilities
-│   ├── sqli_params.txt          # SQLi potential params
-│   ├── lfi_params.txt           # LFI potential params
-│   └── sensitive_endpoints.txt  # Admin/login pages
-│
-├── 📁 screenshots/              # Website screenshots
-├── 📁 ports/                    # Port scan results
-│
-├── 📄 FINAL_REPORT.txt          # Comprehensive text report
-└── 🌐 report.html               # Interactive HTML report
+example.com/
+├── subdomains/
+│   ├── sub.txt
+│   ├── assetfinder.txt
+│   ├── all_subdomains.txt
+│   └── ...
+├── takeover/
+│   ├── subzy.txt
+│   └── subjack.txt
+├── urls/
+│   ├── wayback.txt
+│   ├── gau.txt
+│   ├── katana.txt
+│   ├── hakrawler.txt
+│   ├── all_urls.txt
+│   ├── clean_urls.txt
+│   └── params.txt
+├── patterns/
+│   ├── xss_patterns.txt
+│   ├── lfi_patterns.txt
+│   ├── sqli_patterns.txt
+│   ├── ssrf_patterns.txt
+│   └── sensitive.txt
+├── scans/
+│   ├── xss_results.txt
+│   └── nuclei_results.txt
+└── alive.txt             # Interactive HTML report
 ```
 ### 📊 **Sample Output**
 ```text
